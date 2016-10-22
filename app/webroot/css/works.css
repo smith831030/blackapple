@@ -1,0 +1,75 @@
+@charset 'euc-kr';
+
+#works {position:relative; width:1000px; margin:30px auto 0 auto; }
+#works h2 {margin:0 auto 10px auto; width:1000px; }
+#works h3 {font-family:tahoma; font-size:25px; font-weight:bold; float:left; margin-right:10px; }
+#works h4 {display:block; margin:0 0 10px 20px; }
+#works h4 a {font-family:tahoma; font-size:18px; line-height:20px; font-weight:bold; color:#c10002; }
+#works h4 a:hover {color:#e8b019; }
+#works ul {margin:0 auto 0 auto; }
+#works ul, #works ul li  {width:1000px;}
+#works ul li span {font-family:tahoma; font-size:23px; line-height:23px; font-weight:bold; height:50px; display:block; }
+#works ul li span.year {width:10%; float:left; }
+#works ul li span.content {width:65%; float:left; }
+
+#works ul li span.content a:link{font-family:tahoma; font-size:30px; color: #333333; text-decoration:none;}
+#works ul li span.content a:visited{font-family:tahoma; font-size:30px; color: #333333; text-decoration:none;}
+#works ul li span.content a:active{font-family:tahoma; font-size:30px; color: #333333; text-decoration:none;}
+#works ul li span.content a:hover{font-family:tahoma; font-size:30px; color: #e8b019; text-decoration:none;}
+
+#works ul li span.type {width:25%; float:right; text-align:right; }
+
+#works #work_list_sub {width:25%; float:left; }
+#work_list_sub ul, #work_list_sub ul li  {width:100%; height:25px; }
+#works #work_list_sub ul li span {font-size:12px; height:25px; }
+#works #work_list_sub ul li span.year {width:15%; float:left; }
+#works #work_list_sub ul li span.content {width:85%; float:left; }
+#works #work_list_sub ul li span.content a{font-size:12px;}
+
+#work_content {width:75%; margin:0 auto 0 auto; float:left;}
+#work_content span.type {color:#c10002; font-weight:bold; }
+#work_content button#btn_back {width:50px; height:30px; }
+#work_content span.information {display:block; width:85%; margin:5px 0 10px 20px;}
+#work_content ul {width:100%; }
+#work_content ul.imagelist li {width:100%; margin-bottom:5px; text-align:center; }
+#work_content ul.list_episode {width:100%; display:block; }
+#work_content ul.list_episode li {width:50px; height:40px; padding:10px 0 0 0; text-align:center; margin:0 5px 20px 0; float:left; background:url(../img/common/bg_orange_dot.png); }
+#work_content ul.list_episode li a{font-size:20px; color:#fff; }
+#work_content .content_bottom{width:100%; text-align:center; margin:20px 0 20px 0; }
+#work_content .content_bottom a{font-size:20px; }
+
+#work_content .mancity li {width:12%; height:100px; display:inline-block; }
+#work_content .mancity li img {width:100%; height:100%; }
+
+@media (max-width:1020px) {
+	#works {width:100%; }
+	#works h2 {margin:0 auto 10px auto; width:100%; }
+	#works h2 img {width:100%;}
+	
+	#works ul, #works ul li  {width:100%;}
+	#works ul li span.content {width:57%; }
+	#works ul li span.type {width:33%; color:#c10002;}
+	
+	#work_content span.information {margin:5px 0 10px 0;}
+	#work_content ul {width:100%;}
+	#work_content ul.imagelist li {width:100%; margin:0; margin-bottom:5px; padding:0; }
+}
+
+@media (max-width:600px) {
+	#works ul li span.year {width:20%; float:left; font-size:20px; line-height:20px;}
+	#works ul li span.content {width:80%; float:left; font-size:20px;}
+	#works ul li span.type {width:80%; margin:-5px 0 0 20%; clear:both; text-align:left; color:#c10002; font-size:20px; }
+	
+	#works ul li span {font-family:tahoma; font-size:15px; line-height:15px; font-weight:bold; height:40px; display:block; }
+	
+	#works ul li span.content a:link{font-family:tahoma; font-size:20px; line-height:25px; color: #333333; text-decoration:none;}
+	#works ul li span.content a:visited{font-family:tahoma; font-size:20px; line-height:25px; color: #333333; text-decoration:none;}
+	#works ul li span.content a:active{font-family:tahoma; font-size:20px; line-height:25px; color: #333333; text-decoration:none;}
+	#works ul li span.content a:hover{font-family:tahoma; font-size:20px; line-height:25px; color: #e8b019; text-decoration:none;}
+	
+	#works #work_list_sub {display:none; }
+	
+	#work_content {width:100%; }
+	#work_content ul.imagelist li img{width:100%;}
+	#work_content .mancity li {width:19%; height:80px;}
+}

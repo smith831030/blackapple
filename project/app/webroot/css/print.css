@@ -1,0 +1,12 @@
+body {background-color:#fff !important; }
+#navbar, #div_order_list, .label_checkbox, .op_release_qty, .op_comment, .btn, .footer, h2{display:none !important; }
+.navbar-brand {display:block !important; }
+.navbar-inverse {background-color:#fff !important; border:0 !important; }
+.navbar-fixed-top {position:relative; }
+#hidden_print_logo {display:block !important; margin:20px; }
+#div_order_product_list {width:100% !important; }
+#print_invoice_info {display:block !important; padding-bottom:20px; border-bottom:2px solid #000; }
+#print_invoice_info address {display:inline-table !important; margin-right:20px; }
+.table thead tr th {border-bottom:2px solid #000 !important; }
+.table tbody tr td {height:10px !important; padding:2px !important; border-bottom:1px solid #000 !important; }
+.printDp {display:block !important; }

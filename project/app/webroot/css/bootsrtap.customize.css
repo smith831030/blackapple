@@ -1,0 +1,21 @@
+.navbar-brand {padding:0 !important; margin:5px 5px 5px 0 !important; }
+.navbar-nav>li>a {padding-top:20px !important; padding-bottom:20px !important; }
+
+h2 {margin-top:30px; }
+.main {margin:100px 0 100px 0; text-align:center; }
+.footer {margin-top:30px; }
+.checkbox input[type=checkbox] {width:20px !important; height:20px !important; margin:0 0 0 -30px !important; }
+.checkbox .label_checkbox {width:50%; margin-bottom:2px; }
+#product_list {display:none; }
+.orderqty {width:50px; margin-bottom:2px; }
+
+.table tbody tr {cursor:pointer; }
+
+.mReleaseSelect {margin-bottom:40px !important; }
+.span_danger {color:#ff0000; }
+
+.printDp {display:none; }
+select:disabled {background-color:rgb(235, 235, 228); }
+.btn_add_new_item {margin-bottom:5px; }
+
+.startDate, .endDate {width:90px; }

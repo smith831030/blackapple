@@ -1,0 +1,59 @@
+@charset 'euc-kr';
+
+.post {position:relative; width:1000px; margin:30px auto 0 auto; }
+.post .post_body {width:100%; }
+.post .post_body h2 {font-size:25px; font-weight:bold; }
+.post .post_body .created {font-size:15px; color:#666; display:block; width:100%; padding-bottom:5px; margin-bottom:10px; border-bottom:2px solid #666; }
+.post .post_body .url {display:block; width:100%; height:25px; text-align:right;  }
+.post .post_body .body {font-size:15px; width:100%; margin-bottom:20px; }
+
+.post .post_comment {width:100%; }
+
+.post .post_comment .post_comment_form  {margin-bottom:10px; }
+.post .post_comment .post_comment_form  img{float:left; }
+.post .post_comment .post_comment_form  textarea{display:block; width:55%; height:32px; margin-left:5px; float:left; }
+.post .post_comment .post_comment_form  .btn_submit{width:80px; height:32px; }
+
+.post .total {display:block; color:#c20102; font-weight:bold; margin-bottom:10px; }
+.post .post_comment ul.list li {clear:both; margin-bottom:5px; }
+.post .post_comment ul.list li span.img {display:block; float:left; margin-top:5px; }
+.post .post_comment ul.list li span.img img {width:32px; }
+.post .post_comment ul.list li div.info {margin-left:40px; }
+.post .post_comment ul.list li span.created {display:block; color:#999; }
+.post .post_comment ul.list li span.icon_del_comment {  }
+
+.post .post_comment ul.list li  div.reply_list {margin-left:40px;}
+
+.post .paging {display:block; width:100%; text-align:center; }
+.post .paging span {font-size:15px; border:1px solid #999; padding:7px; margin:2px; border-radius:3px;}
+.post .paging span.active {font-weight:bold; color:#e8b019; }
+.post .paging a {font-size:15px; }
+
+.post .post_lists {width:100%; margin-top:20px;  padding-top:20px; }
+.post .post_lists h2 {display:block; font-size:15px; color:#c20102; font-weight:bold; margin-bottom:10px; }
+.post .post_lists ul {margin-bottom:20px; }
+.post .post_lists ul li {clear:both; height:30px; padding-top:10px; border-bottom:1px dotted #666; }
+.post .post_lists ul li span.title {display:block; float:left; }
+.post .post_lists ul li span.now  a{color:#e8b019; font-weight:bold; }
+.post .post_lists ul li span.created {display:block; float:right; color:#666; }
+
+.post .post_main {width:100%; }
+.post .post_main h3 {width:100%; height:50px; margin:10px 0 10px 0; padding-top:15px; font-size:30px; color:#fff; text-align:center; background-color:#666; border-radius:.25em; }
+.post .post_main h3 a {font-size:30px; color:#fff; }
+.post .post_main h3 a:hover {color:#e8b019; }
+.post .post_main h4 {width:10%; height:30px; margin:20px 0 20px 0; padding-top:5px; font-size:20px; color:#fff; text-align:center; background-color:#ccc; border-radius:.25em; }
+.post .post_main ul li {display:inline-block; }
+.post .post_main ul li span.title,
+.post .post_main ul li span.created {display:none; cursor:pointer; }
+.post .post_main ul li img {max-height:280px; max-width:100%; }
+
+@media (max-width:1020px) {
+	.post {width:100%; }
+	.post .post_body .body img {width:100%; }
+}
+
+@media (max-width:600px) {
+	.post .post_body .body img {width:100%;}
+	.post .paging span {font-size:25px; }
+	.post .paging a {font-size:25px; }
+}

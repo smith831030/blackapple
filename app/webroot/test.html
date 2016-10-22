@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>
+		DH's BlackApple:
+		MainPage	</title>
+	<link href="/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="/css/style.css" /><script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>	<meta name="p:domain_verify" content="ff3ec8b8ddc42a05ec92d65f3209cce7"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="alternate" type="application/rss+xml" href="http://blackapple.kr/Posts/index.rss" title="RSS feed for BlackApple"/>
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css' />
+	</head>
+<body>
+	<div id="wrap">
+							
+				<!--<POST LIST>-->
+				<div id="insta_list"></div>
+				<!--</POST LIST>-->
+				<a href="https://api.instagram.com/oauth/authorize/?client_id=1bdf66bc17d648b3888f15a966aecb14&redirect_uri=http://gamichicken.com.au/test.php&response_type=code">get token</a>
+		<!--</FOOTER>-->
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+			  type: "GET",
+			  dataType: 'jsonp',
+			  url : 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1652050990.5e7ee37.18ab03a50c3e4b2d990da6850c216a1e&count=5'
+			  
+			}).done(function( data ) {
+				console.log(data);
+			});
+		});
+		
+	</script>
+</body>
+</html>

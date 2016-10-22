@@ -1,0 +1,51 @@
+@charset 'euc-kr';
+
+.admin {position:relative; width:1000px; margin:30px auto 0 auto; }
+
+.admin .div_title {width:100%; }
+.admin .div_title span{font-size:15px; display:block; float:left; font-weight:bold; }
+.admin .div_title span.title_idx{width:10%; }
+.admin .div_title span.title_title{width:70%; }
+.admin .div_title span.title_date{width:20%; }
+
+.admin .list ul {width:100%; }
+.admin .list ul li {height:25px; clear:both; }
+.admin .list ul li span{font-size:15px; display:block; float:left;  }
+.admin .list ul li span a{font-size:15px; }
+.admin .list ul li span.idx{width:10%; }
+.admin .list ul li span.title{width:70%; }
+.admin .list ul li span.date{width:20%; }
+
+.admin .post_body {width:100%; }
+.admin .post_body h2 {font-size:25px; font-weight:bold; }
+.admin .post_body .created {font-size:15px; color:#666; display:block; width:100%; padding-bottom:5px; margin-bottom:10px; border-bottom:2px solid #666; }
+.admin .post_body .body {font-size:15px; width:100%; }
+.admin .post_body .url {display:block; width:100%; height:25px; text-align:right;  }
+
+.admin .post_comment {width:100%; }
+
+.admin .post_comment .total {display:block; color:#c20102; font-weight:bold; margin-bottom:10px; }
+.admin .post_comment ul.list li {clear:both; margin-bottom:5px; }
+.admin .post_comment ul.list li span.img {display:block; float:left; }
+.admin .post_comment ul.list li span.img img {width:32px; }
+.admin .post_comment ul.list li div.info {margin-left:40px; }
+.admin .post_comment ul.list li span.created {display:block; color:#999; }
+
+.admin .paging {display:block; width:100%; text-align:center; }
+.admin .paging span {font-size:15px; }
+.admin .paging span.current {font-weight:bold; color:#e8b019; }
+.admin .paging a {font-size:15px; }
+
+.admin .control {width:100%; clear:both; margin-top:20px; }
+.admin .control a {font-size:15px; padding:5px; border:1px solid #000; background-color:#fff;  }
+
+@media (max-width:1020px) {
+	.admin {width:100%; }
+	
+}
+
+@media (max-width:600px) {
+	.admin .post_body .body img {width:100%;}
+	.admin .paging span {font-size:25px; }
+	.admin .paging a {font-size:25px; }
+}

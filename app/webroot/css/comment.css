@@ -1,0 +1,54 @@
+@charset 'euc-kr';
+
+#guestbbs {position:relative; width:100%; margin-top:30px; }
+#guestbbs h2 {width:500px; margin:0 auto 10px auto; }
+
+#guestbbs #control {width:500px; padding:10px; margin:0 auto 10px auto; background-color:#fff; }
+#guestbbs .writeForm input {width:80px; height:19px; padding:2px;}
+#guestbbs .writeForm input#submit {width:80px; height:25px; }
+#guestbbs .writeForm textarea {padding:5px; width:98%; height:40px; }
+#guestbbs .writeForm .zsfImg {margin-bottom:-8px; float:right; }
+#guestbbs .writeForm .zsfCode {float:right; }
+#guestbbs .writeForm .comment {margin:5px 0 5px 0;}
+
+#guestbbs .reWriteForm {width:470px; }
+
+#guestbbs .list {width:500px; padding:10px; margin:0 auto 10px auto; background-color:#fff; }
+#guestbbs .list .bg{background-color:#ddd; }
+#guestbbs .list .id{width:80px; font-weight:bold; font-size:14px; }
+#guestbbs .list .date{width:80px; font-size:12px; color:#666; }
+#guestbbs .list .comment_content{display:block; font-size:12px; margin:5px 0 5px 0; }
+#guestbbs .list .comment_total{font-size:12px; color:#666; }
+#guestbbs .list li{padding:10px; }
+
+#guestbbs .sub {width:450px;}
+
+#guestbbs #paging {width:500px; padding:10px; margin:0 auto 10px auto; background-color:#fff; }
+#guestbbs #paging .current {font-weight:bold; }
+
+@media (max-width:600px) {
+	form, input, textarea {font-family:tahoma; font-size:25px; color:#333; }
+	
+	#guestbbs h2 {display:none; }
+	#guestbbs #control {width:92%; padding:2%; margin:2%; }
+	
+	#guestbbs .writeForm input {width:90%; height:25px; margin-top:5px; }
+	#guestbbs .writeForm input#submit {width:95%; height:45px; }
+	#guestbbs .writeForm textarea {width:95%; height:75px; }
+	#guestbbs .writeForm .zsfImg {margin-top:8px; float:left; }
+	#guestbbs .writeForm .zsfCode {margin:4px 0 0 10px; width:100px; float:none; }
+	#guestbbs .writeForm .comment {margin:5px 0 5px 0;}
+
+	#guestbbs .reWriteForm {width:100%; }
+
+	#guestbbs .list {width:92%; padding:2%; margin:2%; background-color:#fff; }
+	#guestbbs .list .id{width:80px; font-weight:bold; font-size:25px; }
+	#guestbbs .list .date{width:80px; font-size:15px; color:#666; }
+	#guestbbs .list .comment_content{display:block; font-size:20px; margin:5px 0 5px 0; }
+	#guestbbs .list .comment_total{font-size:15px; color:#666; }
+	#guestbbs .list li{padding:2%; }
+
+	#guestbbs .sub {width:90%;}
+
+	#guestbbs #paging {width:92%; padding:2%; margin:2%; background-color:#fff; }
+}

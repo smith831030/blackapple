@@ -1,0 +1,29 @@
+@charset 'euc-kr';
+
+#about {position:relative; width:1000px; margin:0 auto 0 auto; }
+#about #profile_image {position:relative; width:150px; height:210px; margin:30px 0 0 0; float:left; }
+
+#about #profile, #about #blackapple {width:410px; float:left; margin:30px 0 0 15px;}
+#about #profile #profile_dh, #about #profile #profile_history
+, #about #blackapple #blackapple_history {width:400px; background-color:#fff; margin-bottom:15px; padding:5px; }
+
+@media (max-width:1000px) {
+	#about {width:100%; }
+	#about #profile, #about #blackapple {width:35%; margin:30px 0 0 15px;}
+	#about #profile #profile_dh, #about #profile #profile_history
+, #about #blackapple #blackapple_history {width:100%; }
+	
+	
+	table {width:100%;}
+}
+
+@media (max-width:800px) {
+	#about h2 {margin-top:10px; font-size:25px; }
+	body {font-family:tahoma; font-size:15px; line-height:15px; }
+	
+	#about {width:90%; }
+	#about #profile_image {float:none; width:100%; background:#fff; text-align:center; }
+	#about #profile, #about #blackapple {width:100%; float:none; margin:10px 0 0 0;}
+	#about #profile #profile_dh, #about #profile #profile_history
+, #about #blackapple #blackapple_history {padding:0; }
+}
