@@ -55,7 +55,13 @@
 				<div class="post_body" itemscope itemtype="http://schema.org/Article">
 					<h2 itemprop="name">[<?php echo $view['BaPostCategory']['category_title'];?>] <?php echo $view['BaPost']['title'];?></h2>
 					<span itemprop="datePublished" content="<?php echo $view['BaPost']['created'];?>" class="hidden"><?php echo $view['BaPost']['created'];?></span>
-					<div class="text-left"><?php echo $this->Html->link('http://blackapple.kr/Posts/view/'.$view['BaPost']['id'],'http://blackapple.kr/Posts/view/'.$view['BaPost']['id'], array('itemprop'=>'url', 'class'=>'btn btn-success btn-xs'));?></div>
+					<div class="text-left">
+						<?php echo $this->Html->link('http://blackapple.kr/Posts/view/'.$view['BaPost']['id'],'http://blackapple.kr/Posts/view/'.$view['BaPost']['id'], array('itemprop'=>'url', 'class'=>'btn btn-success btn-xs'));?>
+						
+						<div class="fb-share-button" data-href="<?php echo $og_url;?>" data-layout="button" data-size="large" data-mobile-iframe="true">
+							<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($og_url);?>&amp;src=sdkpreparse">Share</a>
+						</div>
+					</div>
 					<img itemprop="image" src="/upload/<?php echo $view['BaPost']['img'];?>" class="hidden" title="<?php echo $view['BaPost']['title'];?>" />
 
 					<div class="post-body" itemprop="articleBody"><?php echo $view['BaPost']['body'];?></div>

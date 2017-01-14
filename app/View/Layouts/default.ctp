@@ -57,8 +57,20 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 		<meta property="og:description" content="<?php echo $og_description;?>"/>
 		<meta property="fb:app_id" content="238850962958240"/>
 	<?php }?>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NRMZ74H');</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRMZ74H"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<div>
 	<!--<MENU>-->
 		<nav class="navbar navbar-default">
@@ -106,18 +118,14 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 		<!--</FOOTER>-->
 	</div>
 
-	<!--<Google log>-->
-	<script type="text/javascript">
-		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	<script type="text/javascript">
-		try {
-		var pageTracker = _gat._getTracker("UA-7102555-1");
-		pageTracker._trackPageview();
-		} catch(err) {}
+		ga('create', 'UA-7102555-1', 'auto');
+		ga('send', 'pageview');
 	</script>
-	<!--</Google log>-->
 </body>
 </html>
