@@ -16,8 +16,8 @@ class MainPageController extends AppController {
 
 		/* post lists */
 		$options = array(
-			'fields' => array('BaPost.id', 'BaPost.title', 'BaPost.created', 'BaPost.body', 'BaPost.tags', 'BaPost.img', 'BaPost.comment_total', 'BaPostCategory.category_title'),
-			'limit' => 18,
+			'fields' => array('BaPost.id', 'BaPost.title', 'BaPost.created', 'BaPost.body', 'BaPost.tags', 'BaPost.img', 'BaPost.comment_total', 'BaPost.category_id', 'BaPostCategory.category_title'),
+			'limit' => 4,
 			'order' => array(
 				'BaPost.id' => 'DESC'
 			),

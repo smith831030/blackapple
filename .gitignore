@@ -2,12 +2,14 @@
 #################################################
 /app/Config/database.php
 /app/tmp
+/app/webroot/upload/
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
 /vendors
 /build
 /dist
 /tags
+
 
 # OS generated files #
 ######################

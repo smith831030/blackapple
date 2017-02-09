@@ -1,5 +1,4 @@
 <?php echo $this->Html->script('post.js?ver=2015060421', array('inline' => false, 'async' => true));?>
-<?php echo $this->Html->script('masonry.pkgd.min.js', array('inline' => false, 'async' => true));?>
 
 				<!--<POST LIST>-->
 				<div class="container post-main">
@@ -9,7 +8,7 @@
 						<div class="grid">
 								<?php foreach ($posts as $post): ?>
 								<?php if($posts[0]['BaPost']['id']==$post['BaPost']['id']) $class='now'; else $class=''; ?>
-								<div class="col-md-2 col-xs-4 grid-item">
+								<div class="col-md-2 col-xs-4 grid-item animated pulse">
 									<a href="<?php echo '/Posts/view/'.$post['BaPost']['id'];?>" class="thumbnail">
 										<?php echo $this->Html->image('/upload/'.$post['BaPost']['img'], array('alt'=>$post['BaPost']['title'], 'title'=>$post['BaPost']['title'])); ?>
 									</a>
@@ -34,9 +33,8 @@
 				<!--</POST LIST>-->
 
 				<script>
-				$(document).ready(function(){
+				$(window).on('load', function(){
 					$('.grid').masonry({
-						// options
 						itemSelector: '.grid-item'
 					});
 				});
