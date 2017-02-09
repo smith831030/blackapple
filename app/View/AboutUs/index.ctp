@@ -1,12 +1,12 @@
 			<!--<ABOUT BLACK APPLE>-->
 			<div class="container">
 				<div class="col-md-2">
-					<img src="img/aboutba/profile_image.jpg" title="profile image" alt="profile image" width="150" height="210" />
+					<img src="img/aboutba/profile_image.jpg" title="profile image" alt="profile image" width="150" height="210" class="animated bounceInLeft" />
 				</div>
 
 				<!--<PROFILE>-->
 				<div class="col-md-5">
-					<div id="profile_dh">
+					<div id="profile_dh" class="animated fadeInDown">
 						<h2>DH's Profile</h2>
 
 						<table class="table">
@@ -51,7 +51,7 @@
 						</table>
 					</div>
 
-					<div id="profile_history">
+					<div id="profile_history" class="animated fadeInDown">
 						<h2>History</h2>
 
 						<table class="table">
@@ -170,7 +170,7 @@
 
 				<!--<BLACK APPLE>-->
 				<div class="col-md-5">
-					<div id="blackapple_history">
+					<div id="blackapple_history" class="animated bounceInRight">
 						<h2>BlackApple's history</h2>
 
 						<table class="table">
