@@ -2,7 +2,7 @@
 
 .navbar {margin-bottom:0; }
 
-.main-top {width:100%; height:500px; background:#85bfed url(../img/common/main-top.jpg) no-repeat center top;;}
+.main-top {width:100%; height:500px; background:#85bfed url(../img/common/main-top.jpg?ver=20170215) no-repeat center top;;}
 
 .grid-item {padding:5px; margin:-2px;}
 a.thumbnail {margin-bottom:0;}

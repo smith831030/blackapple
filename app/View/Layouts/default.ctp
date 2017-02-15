@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 	<link rel="alternate" type="application/rss+xml" href="http://blackapple.kr/Posts/index.rss" title="RSS feed for BlackApple"/>
 	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<?php echo $this->Html->css('common.css?ver=20170209');?>
+	<?php echo $this->Html->css('common.css?ver=20170215');?>
 	<?php echo $this->Html->css('animate.css');?>
 
 	<meta name="google-site-verification" content="TcCwvCGElUL8o6iMSZfgzB2arSLosDYs7L0n1BbGKHI" />
