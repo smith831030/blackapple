@@ -34,7 +34,7 @@
 										<h4 class="modal-title">Players</h4>
 									</div>
 									<div class="modal-body">
-										<table class="table">
+										<table class="table" id="players">
 											<thead>
 												<tr>
 													<th><input type="checkbox" id="player_all"></th>
@@ -107,6 +107,9 @@
 			$(document).ready(function(){
 				$('#player_all').on('change', function(e){
 					$('.p_id').attr('checked', $(this).prop('checked'));
-				})
+				});
+				$('#players').DataTable({
+					paging: false
+				});
 			});
 			</script>

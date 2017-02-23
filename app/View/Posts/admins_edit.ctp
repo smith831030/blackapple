@@ -8,7 +8,7 @@
 						<!--<POST CATEGORY-->
 						<select name="data[BaPost][category_id]" class="form-control">
 							<?php foreach ($categories as $category): ?>
-							<option value="<?php echo $category['BaPostCategory']['id'];?>"><?php echo $category['BaPostCategory']['category_title'];?></option>
+							<option value="<?php echo $category['BaPostCategory']['id'];?>" <?php if($this->request->data['BaPost']['category_id']==$category['BaPostCategory']['id']){echo 'selected';}?>><?php echo $category['BaPostCategory']['category_title'];?></option>
 							<?php endforeach; ?>
 							<?php unset($category); ?>
 
@@ -35,7 +35,7 @@
 										<h4 class="modal-title">Players</h4>
 									</div>
 									<div class="modal-body">
-										<table class="table">
+										<table class="table" id="players">
 											<thead>
 												<tr>
 													<th><input type="checkbox" id="player_all"></th>
@@ -111,6 +111,10 @@
 				$('#player_all').on('change', function(e){
 					$('.p_id').attr('checked', $(this).prop('checked'));
 				})
+
+				$('#players').DataTable({
+					paging: false
+				});
 
 				<?php foreach($p_players as $p):?>
 					$('#player_<?=$p['BaPostsPlayer']['player_id'];?>').attr('checked', true);

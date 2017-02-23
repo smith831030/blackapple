@@ -15,7 +15,7 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-$cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
+$cakeDescription = __d('cake_dev', 'BlackApple');
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,6 +45,9 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.css">
+ 	<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.js"></script>
 
 	<meta name="google-site-verification" content="TcCwvCGElUL8o6iMSZfgzB2arSLosDYs7L0n1BbGKHI" />
 	<?php if(isset($og_img)){?>
