@@ -76,6 +76,7 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
             <li><a href="/Admins/AboutUs" role="button">AboutUs</a></li>
+            <li><a href="/Admins/Players" role="button">Player</a></li>
             <li><a href="/Admins/Category" role="button">Category</a></li>
 		        <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artworks <span class="caret"></span></a>
@@ -89,6 +90,7 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 		      </ul>
 
           <ul class="nav navbar-nav navbar-right">
+			  <li><button class="btn btn-default navbar-btn" onclick="location.href='/';">Homepage</button></li>
             <?php if(AuthComponent::user('id')){ ?>
               <li><a href="/Admins/Login/logout">Logout</a></li>
             <?php } ?>
@@ -102,6 +104,7 @@ $cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
 
 		<!--<FOOTER>-->
 		<footer>
+			<p></p>
 			<h2 class="hide">FOOTER</h2>
 			<p>
 				Copyright ⓒ <?php echo $this->Html->link('JANGHO,SEO','mailto:smith831030@gmail.com')?> all rights reserved

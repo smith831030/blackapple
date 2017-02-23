@@ -354,12 +354,15 @@ class PostsController extends AppController {
 			}
 			$this->set('post', $post);
 
+			$players = $this->get_players($idx);
+			$this->set('players', $players);
+
 			/* comment lists */
-			$this->loadModel('BaPostComment');
-			$this->set('comments', $this->BaPostComment->find('all', array(
-							'conditions' => array('BaPostComment.post_id' => $post['BaPost']['id']),
-							'order'=>'BaPostComment.id ASC'
-						)));
+			// $this->loadModel('BaPostComment');
+			// $this->set('comments', $this->BaPostComment->find('all', array(
+			// 				'conditions' => array('BaPostComment.post_id' => $post['BaPost']['id']),
+			// 				'order'=>'BaPostComment.id ASC'
+			// 			)));
 		}
     }
 
@@ -371,10 +374,21 @@ class PostsController extends AppController {
 		}else{
 			/* post */
 			$this->loadModel('BaPost');
+			$this->loadModel('BaPlayer');
+			$this->loadModel('BaPostsPlayer');
 
 			if ($this->request->is('post')) {
 				$this->BaPost->create();
 				if ($this->BaPost->save($this->request->data)) {
+					$post_id=$this->BaPost->id;
+					$data=array();
+					if($this->request->data['player'] && sizeof($this->request->data['player'])>0){
+						foreach($this->request->data['player'] as $player_id){
+							$data[]=array('post_id'=>$post_id, 'player_id'=>$player_id);
+						}
+
+						$this->BaPostsPlayer->saveall($data);
+					}
 					$this->Session->setFlash(__('Your post has been saved.'));
 					return $this->redirect(array('action' => 'Admins_list'));
 				}
@@ -382,6 +396,7 @@ class PostsController extends AppController {
 			}else{
 				/*category lists */
 				$this->loadModel('BaPostCategory');
+				$this->set('players', $this->BaPlayer->find('all', array('order'=>'BaPlayer.id ASC')));
 				$this->set('categories', $this->BaPostCategory->find('all', array('order'=>'BaPostCategory.category_order ASC')));
 			}
 		}
@@ -394,6 +409,8 @@ class PostsController extends AppController {
 			return $this->redirect(array('controller'=>'Login', 'action' => 'Admins_login'));
 		}else{
 			$this->loadModel('BaPost');
+			$this->loadModel('BaPlayer');
+			$this->loadModel('BaPostsPlayer');
 
 			if (!$id) {
 				throw new NotFoundException(__('Invalid post'));
@@ -407,6 +424,16 @@ class PostsController extends AppController {
 			if ($this->request->is(array('post', 'put'))) {
 				$this->BaPost->id = $id;
 				if ($this->BaPost->save($this->request->data)) {
+					$this->BaPostsPlayer->deleteAll(array('post_id'=>$id));
+					$data=array();
+					if($this->request->data['player'] && sizeof($this->request->data['player'])>0){
+						foreach($this->request->data['player'] as $player_id){
+							$data[]=array('post_id'=>$id, 'player_id'=>$player_id);
+						}
+
+						$this->BaPostsPlayer->saveall($data);
+					}
+
 					$this->Session->setFlash(__('Your post has been updated.'));
 					return $this->redirect(array('action' => 'Admins_list'));
 				}
@@ -414,7 +441,11 @@ class PostsController extends AppController {
 			}else{
 				/*category lists */
 				$this->loadModel('BaPostCategory');
+				$this->set('players', $this->BaPlayer->find('all', array('order'=>'BaPlayer.id ASC')));
 				$this->set('categories', $this->BaPostCategory->find('all', array('order'=>'BaPostCategory.category_order ASC')));
+
+				$p_players=$this->get_players($id);
+				$this->set('p_players', $p_players);
 			}
 
 			if (!$this->request->data) {
@@ -427,6 +458,7 @@ class PostsController extends AppController {
 		$this->layout='admin';
 		$this->set('page', 'post');
 		$this->loadModel('BaPost');
+		$this->loadModel('BaPostsPlayer');
 
 		if(!$this->Auth->loggedIn()){
 			return $this->redirect(array('controller'=>'Login', 'action' => 'Admins_login'));
@@ -436,9 +468,11 @@ class PostsController extends AppController {
 			}
 
 			if ($this->BaPost->delete($id)) {
-				$this->Session->setFlash(
-					__('The post with id: %s has been deleted.', h($id))
-				);
+				if($this->BaPostsPlayer->deleteAll(array('post_id'=>$id))){
+					$this->Session->setFlash(
+						__('The post with id: %s has been deleted.', h($id))
+					);
+				}
 				return $this->redirect(array('action' => 'Admins_list'));
 			}
 		}
@@ -449,6 +483,23 @@ class PostsController extends AppController {
 		if($this->BaPost->updateAll(array('category_id'=>$this->request->data['category_id']), array('id'=>$this->request->data['id']))){
 			return $this->redirect(array('action'=>'Admins_list'));
 		}
+	}
+
+	private function get_players($post_id){
+		$this->loadModel('BaPostsPlayer');
+		return $this->BaPostsPlayer->find('all', array(
+				'fields'=>array('BaPostsPlayer.*, BaPlayer.*'),
+				'joins' => array(
+					array('table' => 'ba_players',
+						'alias' => 'BaPlayer',
+						'type' => 'inner',
+						'conditions' => array(
+							'BaPostsPlayer.player_id = BaPlayer.id',
+						)
+					)
+				),
+				'conditions'=>array('BaPostsPlayer.post_id'=>$post_id)
+		));
 	}
 }
 ?>

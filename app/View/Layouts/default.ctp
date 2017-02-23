@@ -15,14 +15,14 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-$cakeDescription = __d('cake_dev', 'DH\'s BlackApple');
+$cakeDescription = __d('cake_dev', 'BlackApple | Manchester City FC Fan Art');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+		<?php echo $cakeDescription ?> | 
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php

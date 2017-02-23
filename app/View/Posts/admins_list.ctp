@@ -25,7 +25,9 @@
 
 					<!-- <paging> -->
 					<div class="text-center">
-						<?php echo $this->Paginator->numbers(array('separator' => ' &nbsp;'));?>
+						<ul class="pagination">
+							<?php echo $this->Paginator->numbers(array('tag'=>'li', 'currentTag'=>'a', 'currentClass'=>'active', 'separator'=>''));?>
+						</ul>
 					</div>
 					<!-- </paging> -->
 					<div class="col-md-6">

@@ -20,6 +20,7 @@
 .admin .post_body h2 {font-size:25px; font-weight:bold; }
 .admin .post_body .created {font-size:15px; color:#666; display:block; width:100%; padding-bottom:5px; margin-bottom:10px; border-bottom:2px solid #666; }
 .admin .post_body .body {font-size:15px; width:100%; }
+.admin .post_body .body img {max-height:600px; }
 .admin .post_body .url {display:block; width:100%; height:25px; text-align:right;  }
 
 .admin .post_comment {width:100%; }
@@ -41,7 +42,7 @@
 
 @media (max-width:1020px) {
 	.admin {width:100%; }
-	
+
 }
 
 @media (max-width:600px) {
